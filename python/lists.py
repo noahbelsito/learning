@@ -84,3 +84,24 @@ print('Pluto' in planets)
 if 'Mercury' in planets:
     print(planets.index('Mercury'))
 
+# You can call help on a object to find all the method and attributes attached
+help(planets)
+
+# Tuples are almost exactly the same as lists
+t = (1, 2, 3)  # tuples use () instead of square brackets
+print(t)
+# Tuples can't be modified they're immutable
+# Tuples are often used for functions that have multiple return values
+x = 0.125
+# as_integer_ratio is the method of float objects
+#     returns a numerator and denominator in the form of a tuple
+print(x.as_integer_ratio())
+numerator, denominator = x.as_integer_ratio()
+print(numerator, '/', denominator, sep='')
+print(numerator / denominator)
+
+# Multivariable assignment
+a = 1
+b = 0
+a, b = b, a
+print(a, b)
