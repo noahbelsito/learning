@@ -67,3 +67,20 @@ print(x.bit_length)
 print(x.bit_length())  # 4
 # you can also call help on a method
 help(x.bit_length)
+
+# List methods
+# append adds an element to a list with no return
+planets.append('Pluto')  # pluto is a fucking planet you assholes
+help(planets.append)
+print(planets)
+planets.pop()  # removes and returns the last element of a list
+
+# Searching a list
+# Where does earth fall in the order of planets?
+print(planets.index('Earth'))
+# To avoid ValueErrors where a value
+# Use the in conditional operator to check if a value is in a list
+print('Pluto' in planets)
+if 'Mercury' in planets:
+    print(planets.index('Mercury'))
+
