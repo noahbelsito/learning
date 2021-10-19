@@ -71,3 +71,27 @@ No, it's a {1}.
 {0}!
 {1}!""".format('planet', 'dwarf planet')
 print(s)
+
+# Dictionaries are built-in python data structures for mapping keys to values
+numbers = {'one': 1, 'two': 2, 'three': 3}
+print(numbers['one'])
+numbers['eleven'] = 11
+print(numbers['eleven'])
+numbers['one'] = 'Pluto'
+print(numbers)
+
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+planet_to_initial = {planet: planet[0] for planet in planets}  # dictionary comprehension example
+print(planet_to_initial)
+
+# in operator tells us if a key exists in a dictionary
+print('Venus' in planets)
+# a for loop over a dictionary will loop over it's keys
+for k in numbers:
+    print("{} = {}".format(k, numbers[k]))
+
+print(' '.join(sorted(planet_to_initial.values())))
+
+# items() refers to the key: value pair
+for planet, initial in planet_to_initial.items():
+    print("{} begins with \"{}\"".format(planet.rjust(10), initial))
