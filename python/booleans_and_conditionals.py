@@ -54,3 +54,46 @@ print(can_run_for_president(55, False))
 print(can_run_for_president(55, True))
 
 True or True and False  # True
+
+
+# Conditional if, elif, and else example statements
+def inspect(y):
+    if y == 0:
+        print(y, "is zero")
+    elif y > 0:
+        print(y, "is positive")
+    elif y < 0:
+        print(y, "is negative")
+    else:
+        print(y, "is unlike anything I've ever seen...")
+
+
+inspect(0)
+inspect(-15)
+
+
+# Example of conditional scopes
+def f(z):
+    if z > 0:
+        print("Only printed when z is positive; z =", z)
+        print("Also only printed when z is positive; z =", z)
+    print("Always printed, regardless of z's value; z =", z)
+
+
+f(1)
+f(0)
+
+
+# Bool conversions
+print(bool(1))  # all numbers are treated as true, except 0
+print(bool(0))
+print(bool("asf"))  # all strings are treated as true, except the empty string ""
+print(bool(""))
+# Generally empty sequences (strings, lists, and other types we've yet to see like lists and tuples)
+#     are false and the rest are truth
+
+# You can also use non-boolean objects such as "spam" and python will treat them as their corresponding bool value
+if 0:
+    print(0)
+elif "spam":
+    print("spam")
