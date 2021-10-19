@@ -11,7 +11,9 @@ if num_2 > 12:
    print("Number is greater than 12.")
 
 # String concatenation operates on strings to create new strings
-string = "This is num: " + num + ", and this is num_2: " + num_2 + "."
+# str() converts values to strings if it can
+string = "This is num: " + str(num) + ", and this is num_2: " + str(num_2) + "."
+print(string)
 
 # Number variable types
 """
