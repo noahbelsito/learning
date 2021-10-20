@@ -4,6 +4,7 @@
 import math as mt
 from math import *
 import numpy
+import tensorflow as tf
 
 math = mt
 print("It's math! It has type {}".format(type(mt)))
@@ -32,3 +33,25 @@ print(dir(rolls))
 print(rolls.mean())
 print(rolls.tolist())
 help(rolls.ravel)
+
+# Operator overloading
+# [1, 2, 3, 4, 5] + 10   <<   error
+# operators on numpy arrays
+print(rolls + 10)
+print(rolls >= 3)
+
+# 2D Array
+x_list = [[1, 2, 3], [2, 4, 6]]
+x = numpy.asarray(x_list)
+print("x_list = {}\nx =\n{}".format(x_list, x))
+print(x[1, -1])
+
+# Tensorflow usage
+# Creating constants each with the value 1
+a = tf.constant(1)
+b = tf.constant(1)
+# You can add them together
+print(a + b)
+# a symbolic handle to one of the outputs of an operation
+# it does not hold the values of that operation's output,
+# but instead provides a means of computing those values in a TensorFlow TF Session
