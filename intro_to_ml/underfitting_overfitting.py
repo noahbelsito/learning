@@ -18,6 +18,9 @@
 #     my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
 #     print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
 
+# You don't need the validation data after you've decided on a model
+# The model will fit better after you've decided the best choices for the model using validation
+
 """ Summary
     Overfitting: capturing spurious patterns that won't recur in the future, leading to less accurate predictions, or
     Underfitting: failing to capture relevant patterns, again leading to less accurate predictions.
