@@ -22,12 +22,12 @@ print(y)
 
 # Feature columns are inputted into our model (and later used to make predictions) are called features
 # Eg. columns that can probably be used to make a prediction on song.key
-# by convention this data is called x
+# by convention this data is called X
 music_features = ['song.duration', 'song.year', 'song.loudness', 'song.hotttnesss']
-x = music_data[music_features]
-print(x.describe())
+X = music_data[music_features]
+print(X.describe())
 # head shows the top few rows
-print(x.head)
+print(X.head)
 
 # Building your model
 # you will use the scikit-learn library to create your models
@@ -43,9 +43,9 @@ print(x.head)
 music_model = DecisionTreeRegressor(random_state=1)
 
 # Fit model
-music_model.fit(x, y)
+music_model.fit(X, y)
 
 print("Making predictions for the following 5 houses:")
-print(x.head())
+print(X.head())
 print("The predictions are")
-print(music_model.predict(x.head()))
+print(music_model.predict(X.head()))
