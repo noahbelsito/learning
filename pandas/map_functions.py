@@ -3,7 +3,7 @@ import pandas as pd
 example_data = pd.read_csv('example.csv')
 
 # summary functions are used to summarize data
-print(example_data.describe())
+print(example_data.describe())  # describe data
 print(example_data.Yes.mean())  # mean of values in column
 print(example_data.Yes.median())  # median of values in column
 print(example_data.No.unique())  # how many unique values
