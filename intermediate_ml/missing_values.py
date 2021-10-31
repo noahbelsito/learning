@@ -33,9 +33,9 @@ reduced_X_valid = val_X.drop(cols_with_missing, axis=1)
 print("MAE from Approach 1:", score_dataset(reduced_X_train, reduced_X_valid, train_y, val_y))
 
 # Imputation
-my_imputer = SimpleImputer()
-imputed_X_train = pd.DataFrame(my_imputer.fit_transform(train_X))
-imputed_X_valid = pd.DataFrame(my_imputer.transform(val_X))
+my_imputation = SimpleImputer()
+imputed_X_train = pd.DataFrame(my_imputation.fit_transform(train_X))
+imputed_X_valid = pd.DataFrame(my_imputation.transform(val_X))
 
 # Imputation removed column names; put them back
 imputed_X_train.columns = train_X.columns
@@ -53,9 +53,9 @@ for col in cols_with_missing:
     X_valid_plus[col + '_was_missing'] = X_valid_plus[col].isnull()
 
 # Imputation
-my_imputer = SimpleImputer()
-imputed_X_train_plus = pd.DataFrame(my_imputer.fit_transform(X_train_plus))
-imputed_X_valid_plus = pd.DataFrame(my_imputer.transform(X_valid_plus))
+my_imputation = SimpleImputer()
+imputed_X_train_plus = pd.DataFrame(my_imputation.fit_transform(X_train_plus))
+imputed_X_valid_plus = pd.DataFrame(my_imputation.transform(X_valid_plus))
 
 # Imputation removed column names; put them back
 imputed_X_train_plus.columns = X_train_plus.columns
