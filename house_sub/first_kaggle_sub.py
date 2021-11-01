@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_absolute_error
 
-home_path = "sub_data/train.csv"
+home_path = "train.csv"
 home_data = pd.read_csv(home_path)
 y = home_data.SalePrice
 features = ['LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd']
@@ -22,7 +22,7 @@ print("Validation MAE for Random Forest Model: {:,.0f}".format(rf_val_mae))
 rf_model_full = RandomForestRegressor(random_state=1)
 rf_model_full.fit(X, y)
 
-val_path = "sub_data/test.csv"
+val_path = "test.csv"
 val_data = pd.read_csv(val_path)
 val_X = val_data[features]
 rf_val_full_preds = rf_model.predict(val_X)
@@ -30,4 +30,4 @@ rf_val_full_preds = rf_model.predict(val_X)
 # creating a file from predictions
 output = pd.DataFrame({'Id': val_data.Id,
                        'SalePrice': rf_val_full_preds})
-output.to_csv('sub_data/submission.csv', index=False)
+output.to_csv('submission.csv', index=False)
